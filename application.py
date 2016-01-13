@@ -66,6 +66,6 @@ class TapsResource:
 		beers = fetch_beers()
 		resp.body = json.dumps(beers)
 
-app = falcon.API()
+application = falcon.API()
 taps = TapsResource()
-app.add_route('/taps', taps)
+application.add_route('/taps', taps)
